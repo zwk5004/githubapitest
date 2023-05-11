@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:cld="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Claim/1.4"
+			xmlns:vler="http://va.gov/vler/schemas/vlerSupersetSchema/1.1/vler"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:nc="http://niem.gov/niem/niem-core/2.0"
+			xmlns:s="http://niem.gov/niem/structures/2.0" xmlns:i="http://niem.gov/niem/appinfo/2.0"
+			xmlns:ao="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQNUTRITIONAnotherOne_81/1.4"
+			xmlns:mfo="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQGYNECOLOGICALMyfirstone_78/1.4"
+			xmlns:td="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQGYNECOLOGICALThirdDocument_82/1.4"
+			targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Claim/1.4"
+			version="1.4">
+	<xsd:annotation>
+		<xsd:appinfo>
+			<i:ConformantIndicator>false</i:ConformantIndicator>
+		</xsd:appinfo>
+		<xsd:documentation>This is the subset of the VA DBQ EIEM containing claim level details</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://niem.gov/niem/niem-core/2.0"
+			schemaLocation="../subset/niem/niem-core/2.0/niem-core.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/structures/2.0"
+			schemaLocation="../subset/niem/structures/2.0/structures.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/proxy/xsd/2.0" schemaLocation="../subset/niem/proxy/xsd/2.0/xsd.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/appinfo/2.0" schemaLocation="../subset/niem/appinfo/2.0/appinfo.xsd"/>
+	<xsd:import namespace="http://va.gov/vler/schemas/vlerSupersetSchema/1.1/vler"
+			schemaLocation="../subset/vler/vler-1.1.xsd">
+		<xsd:annotation>
+			<xsd:appinfo>
+				<i:ConformantIndicator>false</i:ConformantIndicator>
+			</xsd:appinfo>
+			<xsd:documentation>This is the VLER schema.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+
+	<!--  DBQ schemas  -->
+	<xsd:import
+			namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQNUTRITIONAnotherOne_81/1.4"
+			schemaLocation="../extension/1.4/DBQNUTRITIONAnotherOne_1.4_81.xsd"/>
+	<xsd:import
+			namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQGYNECOLOGICALMyfirstone_78/1.4"
+			schemaLocation="../extension/1.4/DBQGYNECOLOGICALMyfirstone_1.4_78.xsd"/>
+	<xsd:import
+			namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQGYNECOLOGICALThirdDocument_82/1.4"
+			schemaLocation="../extension/1.4/DBQGYNECOLOGICALThirdDocument_1.4_82.xsd"/>
+
+	<!-- This is the document (root) type for the Cliam -->
+	<xsd:complexType name="ClaimType">
+		<xsd:annotation>
+			<xsd:documentation>This is the document (root) type for the Claim</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="cld:DocumentTypeVersion" minOccurs="1"/>
+					<xsd:element ref="cld:ClaimID" minOccurs="1"/>
+					<xsd:element ref="cld:CommonData" minOccurs="1"/>
+					<xsd:element ref="cld:MedicalData" minOccurs="1"/>
+					<xsd:element ref="cld:Attachments" minOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CommonDataType">
+		<xsd:annotation>
+			<xsd:documentation>Type to define the common claim level details.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:VeteranOfInterest" minOccurs="0" />
+					<xsd:element ref="nc:Document" minOccurs="1"/>
+					<xsd:element ref="vler:ExamDetail" minOccurs="1"/>
+					<xsd:element ref="vler:Client" minOccurs="1"/>
+					<xsd:element ref="vler:ServiceProvider" minOccurs="1"/>
+					<xsd:element ref="vler:Approver" minOccurs="0"/>
+					<xsd:element ref="nc:Person" minOccurs="1" maxOccurs="5000"/>
+					<xsd:element ref="nc:Facility" minOccurs="1"/>
+					<xsd:element ref="vler:ServiceProviderClientAssociation" minOccurs="1"/>
+					<xsd:element ref="vler:ClaimInformation" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="CommonData" type="cld:CommonDataType">
+		<xsd:annotation>
+			<xsd:documentation>Common claim level details.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="MedicalDataType">
+		<xsd:annotation>
+			<xsd:documentation>Type to define the medical detail of the claim.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="ao:DBQNUTRITIONAnotherOne_81Form" minOccurs="0"/>
+					<xsd:element ref="mfo:DBQGYNECOLOGICALMyfirstone_78Form" minOccurs="0"/>
+					<xsd:element ref="td:DBQGYNECOLOGICALThirdDocument_82Form" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="MedicalData" type="cld:MedicalDataType">
+		<xsd:annotation>
+			<xsd:documentation>Exactly one selected claim.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="AttachmentsType">
+		<xsd:annotation>
+			<xsd:documentation>Type to define a binary attachments associated with the claim.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:Attachment" minOccurs="0" maxOccurs="5000"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="Attachments" type="cld:AttachmentsType">
+		<xsd:annotation>
+			<xsd:documentation>Zero or more attachments associated with the selected claim.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Claim" type="cld:ClaimType">
+		<xsd:annotation>
+			<xsd:documentation>This exchange schema describes the Claim captured and submitted from the DBQ System to be exchanged with VLER</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentTypeVersion" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>The version number of the current DBQ Schema</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClaimID" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>SSN or overridden Claim value</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+</xsd:schema>
