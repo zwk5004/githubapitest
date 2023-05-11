@@ -1,0 +1,39 @@
+{
+  "inputs" : {
+    "ANOTHERONE_1_TEXT1" : {
+      "field" : "ANOTHERONE_1_TEXT1",
+      "inputType" : "Text Input",
+      "active" : true,
+      "required" : false,
+      "conditionals" : [ ]
+    },
+    "RadioGroup1" : {
+      "field" : "RadioGroup1",
+      "inputType" : "Radio Button",
+      "active" : true,
+      "required" : false,
+      "conditionals" : [ {
+        "sourceValue" : "radio1",
+        "targetField" : "ANOTHERONE_1_TEXT1",
+        "targetState" : {
+          "active" : true,
+          "required" : true
+        }
+      } ]
+    },
+    "ANOTHERONE_4_CHECKBOX1" : {
+      "field" : "ANOTHERONE_4_CHECKBOX1",
+      "inputType" : "Checkbox",
+      "active" : true,
+      "required" : false,
+      "conditionals" : [ {
+        "sourceValue" : "checked",
+        "targetField" : "ANOTHERONE_1_TEXT1",
+        "targetState" : {
+          "active" : true,
+          "required" : true
+        }
+      } ]
+    }
+  }
+}

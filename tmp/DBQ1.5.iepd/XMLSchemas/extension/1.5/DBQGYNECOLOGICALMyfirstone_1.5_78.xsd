@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mfo="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQGYNECOLOGICALMyfirstone_78/1.5" targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQGYNECOLOGICALMyfirstone_78/1.5" version="1.5" elementFormDefault="qualified">
+	<xs:complexType name="DBQGYNECOLOGICALMyfirstone_78FormType">
+		<xs:all>
+			<xs:element name="MYFIRSTONE_1_CHECKBOX1">
+				<xs:annotation>
+					<xs:documentation>checkbox 1</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="mfo:Metadata"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Radiogroup">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Radio 1"/>
+									<xs:enumeration value="Radio 2"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="mfo:Metadata"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="MYFIRSTONE_4_TEXTINPUT1">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="mfo:Metadata"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:element name="DBQGYNECOLOGICALMyfirstone_78Form" type="mfo:DBQGYNECOLOGICALMyfirstone_78FormType"/>
+	<xs:complexType name="Metadata">
+		<xs:all>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="codeSystem" type="xs:string"/>
+			<xs:element name="version" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>

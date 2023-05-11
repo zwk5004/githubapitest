@@ -1,0 +1,29 @@
+<ns:DBQGYNECOLOGICALMyfirstone_78Form xmlns:ns="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQGYNECOLOGICALMyfirstone_78/1.5">
+	<ns:MYFIRSTONE_1_CHECKBOX1>
+		<ns:Value>false</ns:Value>
+		<ns:Metadata>
+			<ns:code>string</ns:code>
+			<ns:codeSystem>string</ns:codeSystem>
+			<ns:version>string</ns:version>
+			<ns:source>string</ns:source>
+		</ns:Metadata>
+	</ns:MYFIRSTONE_1_CHECKBOX1>
+	<ns:Radiogroup>
+		<ns:Value>Radio 2</ns:Value>
+		<ns:Metadata>
+			<ns:code>string</ns:code>
+			<ns:codeSystem>string</ns:codeSystem>
+			<ns:version>string</ns:version>
+			<ns:source>string</ns:source>
+		</ns:Metadata>
+	</ns:Radiogroup>
+	<ns:MYFIRSTONE_4_TEXTINPUT1>
+		<ns:Value>string</ns:Value>
+		<ns:Metadata>
+			<ns:code>string</ns:code>
+			<ns:codeSystem>string</ns:codeSystem>
+			<ns:version>string</ns:version>
+			<ns:source>string</ns:source>
+		</ns:Metadata>
+	</ns:MYFIRSTONE_4_TEXTINPUT1>
+</ns:DBQGYNECOLOGICALMyfirstone_78Form>
