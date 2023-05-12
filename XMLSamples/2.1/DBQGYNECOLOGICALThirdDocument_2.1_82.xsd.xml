@@ -1,0 +1,20 @@
+<ns:DBQGYNECOLOGICALThirdDocument_82Form xmlns:ns="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQGYNECOLOGICALThirdDocument_82/2.1">
+	<ns:RadioGroup>
+		<ns:Value>radio1</ns:Value>
+		<ns:Metadata>
+			<ns:code>string</ns:code>
+			<ns:codeSystem>string</ns:codeSystem>
+			<ns:version>string</ns:version>
+			<ns:source>string</ns:source>
+		</ns:Metadata>
+	</ns:RadioGroup>
+	<ns:THIRDDOCUMENT_2_TEXTINPUT>
+		<ns:Value>string</ns:Value>
+		<ns:Metadata>
+			<ns:code>string</ns:code>
+			<ns:codeSystem>string</ns:codeSystem>
+			<ns:version>string</ns:version>
+			<ns:source>string</ns:source>
+		</ns:Metadata>
+	</ns:THIRDDOCUMENT_2_TEXTINPUT>
+</ns:DBQGYNECOLOGICALThirdDocument_82Form>
