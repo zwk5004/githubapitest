@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:td="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQGYNECOLOGICALThirdDocument_82/1.0" targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQGYNECOLOGICALThirdDocument_82/1.0" version="1.0" elementFormDefault="qualified">
+	<xs:complexType name="DBQGYNECOLOGICALThirdDocument_82FormType">
+		<xs:all>
+			<xs:element name="RadioGroup">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="radio1"/>
+									<xs:enumeration value="radio2"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="td:Metadata"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="THIRDDOCUMENT_2_TEXTINPUT">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="td:Metadata"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:element name="DBQGYNECOLOGICALThirdDocument_82Form" type="td:DBQGYNECOLOGICALThirdDocument_82FormType"/>
+	<xs:complexType name="Metadata">
+		<xs:all>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="codeSystem" type="xs:string"/>
+			<xs:element name="version" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>

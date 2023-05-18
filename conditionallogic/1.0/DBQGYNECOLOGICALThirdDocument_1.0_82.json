@@ -1,0 +1,32 @@
+{
+  "inputs" : {
+    "RadioGroup" : {
+      "field" : "RadioGroup",
+      "inputType" : "Radio Button",
+      "active" : true,
+      "required" : false,
+      "conditionals" : [ {
+        "sourceValue" : "radio1",
+        "targetField" : "THIRDDOCUMENT_2_TEXTINPUT",
+        "targetState" : {
+          "active" : true,
+          "required" : true
+        }
+      }, {
+        "sourceValue" : "radio2",
+        "targetField" : "THIRDDOCUMENT_2_TEXTINPUT",
+        "targetState" : {
+          "active" : true,
+          "required" : true
+        }
+      } ]
+    },
+    "THIRDDOCUMENT_2_TEXTINPUT" : {
+      "field" : "THIRDDOCUMENT_2_TEXTINPUT",
+      "inputType" : "Text Input",
+      "active" : true,
+      "required" : false,
+      "conditionals" : [ ]
+    }
+  }
+}

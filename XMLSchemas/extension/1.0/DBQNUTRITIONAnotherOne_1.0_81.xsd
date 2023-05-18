@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ao="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQNUTRITIONAnotherOne_81/1.0" targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DBQNUTRITIONAnotherOne_81/1.0" version="1.0" elementFormDefault="qualified">
+	<xs:complexType name="DBQNUTRITIONAnotherOne_81FormType">
+		<xs:all>
+			<xs:element name="ANOTHERONE_1_TEXT1">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="ao:Metadata"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RadioGroup1">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="radio1"/>
+									<xs:enumeration value="radio2"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="ao:Metadata"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ANOTHERONE_4_CHECKBOX1">
+				<xs:annotation>
+					<xs:documentation>Checkbox 1</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="ao:Metadata"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:element name="DBQNUTRITIONAnotherOne_81Form" type="ao:DBQNUTRITIONAnotherOne_81FormType"/>
+	<xs:complexType name="Metadata">
+		<xs:all>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="codeSystem" type="xs:string"/>
+			<xs:element name="version" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>

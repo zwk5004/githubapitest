@@ -1,0 +1,39 @@
+{
+  "inputs" : {
+    "MYFIRSTONE_1_CHECKBOX1" : {
+      "field" : "MYFIRSTONE_1_CHECKBOX1",
+      "inputType" : "Checkbox",
+      "active" : true,
+      "required" : false,
+      "conditionals" : [ {
+        "sourceValue" : "checked",
+        "targetField" : "MYFIRSTONE_4_TEXTINPUT1",
+        "targetState" : {
+          "active" : true,
+          "required" : true
+        }
+      } ]
+    },
+    "Radiogroup" : {
+      "field" : "Radiogroup",
+      "inputType" : "Radio Button",
+      "active" : true,
+      "required" : false,
+      "conditionals" : [ ]
+    },
+    "MYFIRSTONE_4_TEXTINPUT1" : {
+      "field" : "MYFIRSTONE_4_TEXTINPUT1",
+      "inputType" : "Text Input",
+      "active" : true,
+      "required" : false,
+      "conditionals" : [ {
+        "sourceValue" : "*",
+        "targetField" : "Radiogroup",
+        "targetState" : {
+          "active" : true,
+          "required" : true
+        }
+      } ]
+    }
+  }
+}
